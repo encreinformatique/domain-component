@@ -1,4 +1,4 @@
-Customer Component [![Build status...](https://secure.travis-ci.org/encreinformatique/domain-component.png?branch=master)](http://travis-ci.org/encreinformatique/domain-component)
+Domain Component [![Build status...](https://secure.travis-ci.org/encreinformatique/domain-component.png?branch=master)](http://travis-ci.org/encreinformatique/domain-component)
 ================
 
 Managing domains in PHP applications.
