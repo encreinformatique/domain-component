@@ -1,5 +1,5 @@
 {
-  "name": "encreinformatique/domain",
+  "name": "encreinformatique/domain-component",
   "type": "library",
   "description": "Domain handling for PHP applications.",
   "keywords": [
