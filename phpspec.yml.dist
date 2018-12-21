@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: EncreInformatique\Component\Domain
+        psr4_prefix: EncreInformatique\Component\Domain
+        src_path: .
