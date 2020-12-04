@@ -57,13 +57,8 @@ interface DomainInterface
      * @param boolean $secured
      */
     public function setSecured($secured);
-
-    /**
-     * Get secured
-     *
-     * @return boolean
-     */
-    public function getSecured();
+   
+    public function isSecured(): bool;
 
     /**
      * Set ip
