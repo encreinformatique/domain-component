@@ -17,7 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\MappedSuperclass()
  * @author Julien Devergnies <encreinformatique@tousleshoraires.fr>
  */
-abstract class Domain
+abstract class Domain implements DomainInterface
 {
     /**
      * @var int $id
