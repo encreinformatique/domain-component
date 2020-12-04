@@ -33,7 +33,7 @@ abstract class Domain
      *
      * @ORM\Column(name="domain", type="string", length=255)
      */
-    protected $domain = null;
+    protected $host = null;
 
     /**
      * @var string $ip
@@ -73,25 +73,26 @@ abstract class Domain
     }
 
     /**
-     * Set domain
+     * Set host
      *
-     * @param string $domain
+     * @param string $host
+     * @return $this
      */
-    public function setDomain($domain)
+    public function setHost($host)
     {
-        if (preg_match("`([A-z0-9-]+)\.([A-z]+)$`", $domain)) {
-            $this->domain = $domain;
+        if (preg_match("`([A-z0-9-]+)\.([A-z]+)$`", $host)) {
+            $this->host = $host;
         }
+        return $this;
     }
-
+    
     /**
-     * Get domain
-     *
+     * Get host
      * @return string
      */
-    public function getDomain()
+    public function getHost()
     {
-        return $this->domain;
+        return $this->host;
     }
 
     /**
@@ -166,5 +167,29 @@ abstract class Domain
     public function getIp()
     {
         return $this->ip;
+    }
+    
+    /**************
+     * DEPRECATED *
+     **************/
+    
+    /**
+     * Get domain
+     * @deprecated Use getHost() instead. 
+     * @return string
+     */
+    public function getDomain()
+    {
+        return $this->getHost();
+    }
+    
+    /**
+     * Set domain
+     * @deprecated Use setHost() instead. 
+     * @param string $domain
+     */
+    public function setDomain($domain)
+    {
+        $this->setHost($domain);
     }
 }
