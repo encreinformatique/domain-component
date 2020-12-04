@@ -129,7 +129,7 @@ abstract class Domain
      *
      * @return bool
      */
-    public function isSecured()
+    public function isSecured(): bool
     {
         return $this->secured;
     }
