@@ -17,7 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\MappedSuperclass()
  * @author Julien Devergnies <encreinformatique@tousleshoraires.fr>
  */
-abstract class Domain
+abstract class Domain implements DomainInterface
 {
     /**
      * @var int $id
@@ -130,7 +130,7 @@ abstract class Domain
      *
      * @return bool
      */
-    public function isSecured()
+    public function isSecured(): bool
     {
         return $this->secured;
     }
