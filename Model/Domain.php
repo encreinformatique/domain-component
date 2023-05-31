@@ -17,6 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\MappedSuperclass()
  * @author Julien Devergnies <encreinformatique@tousleshoraires.fr>
  */
+#[ORM\MappedSuperclass()]
 abstract class Domain implements DomainInterface
 {
     /**
@@ -26,6 +27,9 @@ abstract class Domain implements DomainInterface
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
+    #[ORM\Column(name: 'id', type: 'integer')]
+    #[ORM\Id]
+    #[ORM\GeneratedValue('AUTO')]
     protected $id;
 
     /**
@@ -33,6 +37,7 @@ abstract class Domain implements DomainInterface
      *
      * @ORM\Column(name="domain", type="string", length=255)
      */
+    #[ORM\Column('domain', type: "string", length: 255)]
     protected $host = null;
 
     /**
@@ -40,6 +45,7 @@ abstract class Domain implements DomainInterface
      *
      * @ORM\Column(name="ip", type="string", length=30)
      */
+    #[ORM\Column('ip', type: "string", length: 30)]
     protected $ip;
 
     /**
@@ -47,6 +53,7 @@ abstract class Domain implements DomainInterface
      *
      * @ORM\Column(name="creation", type="datetime")
      */
+    #[ORM\Column('creation', type: "datetime")]
     protected $creation;
 
     /**
@@ -54,6 +61,7 @@ abstract class Domain implements DomainInterface
      *
      * @ORM\Column(name="secured", type="boolean")
      */
+    #[ORM\Column('secured', type: "boolean")]
     protected $secured;
 
     public function __construct()
